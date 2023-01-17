@@ -2,7 +2,7 @@
 function App() {
   return (
     <div >
-      <p> e cell</p>
+      <p> e cell web app</p>
     </div>
   );
 }
