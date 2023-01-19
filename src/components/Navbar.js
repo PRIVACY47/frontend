@@ -1,27 +1,34 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
-
+import { Outlet ,Link }  from "react-router-dom"
 export const NavigationBar= () => {
     return (
-        <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="/"> KITs E-cell</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
+     
+      <div>
+      {/* A "layout route" is a good place to put markup you want to
+          share across all the pages on your site, like navigation. */}
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/Login">Login</Link>
+          </li>
          
-              <Nav.Link href="/login">Login</Nav.Link>
+        </ul>
+      </nav>
 
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      
+
+      {/* An <Outlet> renders whatever child route is currently active,
+          so you can think about this <Outlet> as a placeholder for
+          the child routes we defined above. */}
+      <Outlet />
+    </div>
     );
    
 }
