@@ -1,12 +1,12 @@
 import { BrowserRouter , Routes, Route } from "react-router-dom";
-import  {Home} from "./components/Home"
+
 import {About} from "./components/About"
 
 import {Login} from "./components/Login"
-import {Layout} from "./components/layout"
+import {Home} from "./components/Home"
+import { Pagenotfound } from "./components/pagenotfound";
 
-
-
+import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
@@ -14,12 +14,13 @@ function App() {
      
      <BrowserRouter>
      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-         
-          <Route path="login" element={<Login />} />
-        </Route>
+        
+                <Route path="/" element={<Home />} />
+                  <Route path="about" element={<About />} />
+                
+                  <Route path="login" element={<Login />} />
+                  <Route path="*" element={<Pagenotfound />} />
+        
       </Routes>
      </BrowserRouter>
     </div>

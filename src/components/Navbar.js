@@ -1,34 +1,91 @@
 
 
-import { Outlet ,Link }  from "react-router-dom"
-export const NavigationBar= () => {
-    return (
-     
-      <div>
-      {/* A "layout route" is a good place to put markup you want to
-          share across all the pages on your site, like navigation. */}
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/Login">Login</Link>
-          </li>
+import { Outlet, Link } from "react-router-dom"
+import Logo from '../assets/images/logo.png'
+import bg from '../assets/images/bg.jpg'
+export const NavigationBar = (props) => {
+
+
+
+  const handleMenu = () => {
+  
+    document.querySelector('#menu').classList.toggle('hidden')
+  
+
+  }
+  return (
+
+    <>
+      <div style={{ backgroundImage: `url(${bg})`, height: "300px"}}>
+    <nav
+        class="
+          flex flex-wrap
+          items-center
+          justify-between
+          w-full
          
-        </ul>
-      </nav>
+          md:py-0
+          px-4
+          text-lg text-gray-700
+        "
+      >
+       <div>
+          <a href="/">
+          <img src={Logo} alt="Ecell logo" height="100" width="210" />
+          </a>
+        </div>
+       
+         <svg
+            xmlns="http://www.w3.org/2000/svg"
+            id="menu-button"
+            className="h-6 w-6 cursor-pointer md:hidden block"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            onClick={handleMenu}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+       
+       <div className="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+          <ul
+            className="
+              pt-4
+              text-base text-gray-700
+              md:flex
+              md:justify-between 
+              md:pt-0"
+          >
+            <li>
+              <Link to="/" className="md:p-4 py-2 text-white no-underline block hover:text-purple-400">Home</Link>
+            </li>
+            <li>
+              <Link to="/about" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">About</Link>
 
-      
+            </li>
+            <li>
+              <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
+            </li>
+            <li>
+              <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
+            </li>
+            <li>
+              <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
+            </li>
+            
+          </ul>
+        </div>
+        <Outlet />
+    </nav>
+ 
+ <h1 className="text-white pl-12 pt-5">{props.heading  }</h1>
+  </div>
+    </>
+  );
 
-      {/* An <Outlet> renders whatever child route is currently active,
-          so you can think about this <Outlet> as a placeholder for
-          the child routes we defined above. */}
-      <Outlet />
-    </div>
-    );
-   
 }
