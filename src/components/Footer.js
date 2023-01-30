@@ -2,7 +2,7 @@
 export const Footer = () => {
     return (
         <>
-       <footer className="w-full flex flex-column p-2" style={{backgroundColor:"#1b043b" ,color:"white"}}>
+       <footer className="w-full  p-3" style={{backgroundColor:"#1b043b" ,color:"white"}}>
 
 
             <div className="flex flex-row items-center mt-3 ">

@@ -33,9 +33,9 @@ export const Home = (props) => {
         "
       >
        <div>
-          <a href="/">
+        
           <img src={Logo} alt="Ecell logo" height="100" width="210" />
-          </a>
+       
         </div>
        
          <svg
@@ -91,11 +91,11 @@ export const Home = (props) => {
 
 
             <h1 className=" text-2xl md:text-7xl"> The Entrepreneurship Cell</h1>
-            <p>KITS Guntur</p>
-            <p>You Dream, We Promote</p>
+            {/* <p>KITS Guntur</p>
+            <p>You Dream, We Promote</p> */}
 </div>
   </div>
-        <p>Babu idhi homw ra nayana</p>
+        <p>home page of ecell</p>
         <Footer/>
         </div>
         </>
