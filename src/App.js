@@ -5,9 +5,11 @@ import {About} from "./components/About"
 import {Login} from "./components/Login"
 import {Home} from "./components/Home"
 import { Pagenotfound } from "./components/pagenotfound";
+import {Notifications} from "./components/notification";
+
 
 import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <div >
@@ -19,6 +21,7 @@ function App() {
                   <Route path="about" element={<About />} />
                 
                   <Route path="login" element={<Login />} />
+                  <Route path="notifications" element={<Notifications />} />
                   <Route path="*" element={<Pagenotfound />} />
         
       </Routes>

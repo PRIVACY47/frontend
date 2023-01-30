@@ -21,7 +21,7 @@ export const Home = (props) => {
         <div>
         <div className="h-screen  bg-right-top" style={{ backgroundImage: `url(${bg})`,height:"835px"}}>
     <nav
-        class="
+        className="
           flex flex-wrap
           items-center
           justify-between
@@ -75,10 +75,10 @@ export const Home = (props) => {
               <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
             </li>
             <li>
-              <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
+              <Link to="/notifications" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Notifications</Link>
             </li>
             <li>
-              <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
+              <Link to="/login" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Log in</Link>
             </li>
             
           </ul>
@@ -87,7 +87,7 @@ export const Home = (props) => {
     </nav>
  
  <h1>{props.heading  }</h1>
- <div class="flex flex-column h-screen w-screen justify-center items-center text-white ">
+ <div className="flex flex-column h-screen w-screen justify-center items-center text-white ">
 
 
             <h1 className=" text-2xl md:text-7xl"> The Entrepreneurship Cell</h1>

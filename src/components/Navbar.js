@@ -18,7 +18,7 @@ export const NavigationBar = (props) => {
     <>
       <div style={{ backgroundImage: `url(${bg})`, height: "300px"}}>
     <nav
-        class="
+        className="
           flex flex-wrap
           items-center
           justify-between
@@ -72,10 +72,10 @@ export const NavigationBar = (props) => {
               <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
             </li>
             <li>
-              <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
+              <Link to="/notifications" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Notifications</Link>
             </li>
             <li>
-              <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
+              <Link to="/login" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Log In</Link>
             </li>
             
           </ul>
