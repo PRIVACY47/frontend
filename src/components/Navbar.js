@@ -1,6 +1,6 @@
 
 
-import { Outlet, Link } from "react-router-dom"
+import {  Link } from "react-router-dom"
 import Logo from '../assets/images/logo.png'
 import bg from '../assets/images/bg.jpg'
 export const NavigationBar = (props) => {
@@ -68,9 +68,7 @@ export const NavigationBar = (props) => {
               <Link to="/about" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">About</Link>
 
             </li>
-            <li>
-              <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
-            </li>
+            
             <li>
               <Link to="/notifications" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Notifications</Link>
             </li>
@@ -80,10 +78,10 @@ export const NavigationBar = (props) => {
             
           </ul>
         </div>
-        <Outlet />
+        
     </nav>
  
- <h1 className="text-white pl-12 pt-5">{props.heading  }</h1>
+ <h1 className="text-white  text-2xl pl-12 pt-5">{props.heading  }</h1>
   </div>
     </>
   );

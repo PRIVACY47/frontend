@@ -7,7 +7,7 @@ export const About = () => {
     return (
         <>
         <NavigationBar heading="About" />   
-        <div className='container font-serif text-justify leading-loose mt-12' style={{color:"#585858"}} >
+        <div className='container p-3 font-serif text-justify leading-loose mt-12' style={{color:"#585858"}} >
             <div >
 
                     <h3>AboutUS</h3>

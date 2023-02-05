@@ -4,6 +4,8 @@ import { Outlet, Link } from "react-router-dom"
 import Logo from '../assets/images/logo.png'
 import bg from '../assets/images/bg.jpg'
 import {Footer} from "./Footer"
+
+import toast, { Toaster } from 'react-hot-toast';
 export const Home = (props) => {
 
 
@@ -18,6 +20,7 @@ export const Home = (props) => {
 
 
         <>
+        <Toaster/>
         <div>
         <div className="h-screen  bg-right-top" style={{ backgroundImage: `url(${bg})`,height:"835px"}}>
     <nav
@@ -71,9 +74,7 @@ export const Home = (props) => {
               <Link to="/about" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">About</Link>
 
             </li>
-            <li>
-              <Link to="/" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Start Ups</Link>
-            </li>
+            
             <li>
               <Link to="/notifications" className="md:p-4 py-2 block hover:text-purple-400 text-white no-underline">Notifications</Link>
             </li>
@@ -87,12 +88,11 @@ export const Home = (props) => {
     </nav>
  
  <h1>{props.heading  }</h1>
- <div className="flex flex-column h-screen w-screen justify-center items-center text-white ">
+ <div className="flex flex-col h-screen  justify-center items-center text-white ">
 
 
             <h1 className=" text-2xl md:text-7xl"> The Entrepreneurship Cell</h1>
-            {/* <p>KITS Guntur</p>
-            <p>You Dream, We Promote</p> */}
+           
 </div>
   </div>
         <p>home page of ecell</p>
